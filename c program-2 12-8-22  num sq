@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+
+    int n;
+    scanf("%d",&n);
+    int i,j;
+    int sz=(2*n)-1;
+    int a[sz][sz];
+    int srt=0;
+    int end=sz-1;
+    while(n>0)
+    {
+        for(i=srt;i<=end;i++)
+        {
+            for(j=srt;j<=end;j++)
+            {
+                if(i==srt || i==end || j==srt || j==end)
+                a[i][j]=n;
+            }
+        }
+        srt++;
+        end--;
+        n--;
+    }
+    for(i=0;i<sz;i++)
+    {
+        for(j=0;j<sz;j++)
+        {
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
