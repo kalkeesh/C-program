@@ -1,0 +1,18 @@
+#include<stdio.h>
+void dis(int s,int e);
+int main()
+{
+	int m,n;
+	scanf("%d%d",&m,&n);
+	dis(m,n);
+}
+void dis(int s,int e)
+{
+	if(s>e)
+	{
+		return;
+	}
+	else
+	printf("%d",s);
+	dis(s+1,e);
+}
