@@ -1,0 +1,10 @@
+nt josephus(int n, int k)
+{
+   //Your code here
+   int r=0;
+   if(n==1)
+   r=1;
+   else
+   r=(josephus(n-1,k)+(k-1))%n+1;
+   return r;
+}
