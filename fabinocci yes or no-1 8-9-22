@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+	int f1,f2,f3,i,n;
+	scanf("%d",&n);
+	int a[100],k,ans;
+	scanf("%d",&k);
+	scanf("%d",&ans);
+		int cnt=0;
+	f1=0;
+	f2=1;
+	for(i=0;i<=n;i++)
+	{
+		f3=f1+f2;
+		if(f3==ans)
+		{
+			printf("yes");
+			cnt++;
+		}
+		f1=f2;
+		f2=f3;
+	}
+	if(cnt==0)
+	printf("no");
+}
